@@ -17,12 +17,12 @@ const history = useHistory()
       id,
       title,
       channel: "By You",
-      image: `${process.env.URL}/images/image1.jpeg`,
+      image: `${process.env.REACT_APP_URL}/images/image1.jpeg`,
     };
     const fullVideoData = {
       title,
       channel: "You",
-      image: `${process.env.URL}/images/image1.jpeg`,
+      image: `${process.env.REACT_APP_URL}/images/image1.jpeg`,
       description,
       views: "0",
       likes: "0",
@@ -34,12 +34,12 @@ const history = useHistory()
     };
     axios({
       method: "post",
-      url: `${process.env.URL}/videos`,
+      url: `${process.env.REACT_APP_URL}/videos`,
       data: singleVideoData,
     });
     axios({
       method: "post",
-      url: `${process.env.URL}/videosdetails`,
+      url: `${process.env.REACT_APP_URL}/videosdetails`,
       data: fullVideoData,
     });
     setTitle('')

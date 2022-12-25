@@ -4,14 +4,16 @@ import "./Video.scss";
 const  Video =(props) => {
     return (
       <div className="video__container">
-      <video
-        poster={props.image || `${process.env.URL}/images/image1.jpeg`}
-        controls={props.controls}
+        <video
+          poster={
+            props.image || `${process.env.REACT_APP_URL}/images/image1.jpeg`
+          }
+          controls={props.controls}
         >
-        {/* <source src={videoDetails[0].video} type="video/mp4" /> */}
-      </video>
-    </div>
-  );
+          {/* <source src={videoDetails[0].video} type="video/mp4" /> */}
+        </video>
+      </div>
+    );
 
 };
 

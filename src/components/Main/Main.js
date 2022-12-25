@@ -16,7 +16,7 @@ const Main = () => {
   useEffect(() => {
     axios
       .get(
-        `${process.env.URL}/videos/${
+        `${process.env.REACT_APP_URL}/videos/${
           videoId || "84e96018-4022-434e-80bf-000ce4cd12b8"
         }`
       )
@@ -24,7 +24,7 @@ const Main = () => {
       .then((data) => setVideos(data));
 
     axios
-      .get(`${process.env.URL}/nextvideos`)
+      .get(`${process.env.REACT_APP_URL}/nextvideos`)
       .then((res) => res.data)
       .then((data) => setNextVideos(data));
   }, [videoId]);
